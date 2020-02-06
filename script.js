@@ -6,7 +6,6 @@ const convertToHex = str => {
     let hex = str.charCodeAt(i).toString(16)
     result += hex.slice(-4)
   }
-  console.log(result)
 
   // split the hex into pairs of 6
   let splitHex = result.match(/.{1,6}/g)
@@ -15,11 +14,9 @@ const convertToHex = str => {
   splitHex.forEach(hex => {
     if (hex.length < 6) splitHex.splice(splitHex.indexOf(hex), 1)
   })
-  console.log(splitHex)
 
   // combine arrays
   const combinedColor = combineArrays(splitHex)
-  console.log(combinedColor)
 
   /*var cvs = document.createElement('canvas');
   var ctx = cvs.getContext('2d');
