@@ -1,14 +1,14 @@
 const convertToHex = str => {
 
   // convert to hex
-  let result = ''
+  let hexString = ''
   for (let i = 0; i < str.length; i++) {
     let hex = str.charCodeAt(i).toString(16)
-    result += hex.slice(-4)
+    hexString += hex.slice(-4)
   }
 
   // split the hex into pairs of 6
-  let splitHex = result.match(/.{1,6}/g)
+  let splitHex = hexString.match(/.{1,6}/g)
 
   // remove anything that isn't 6 characters long
   splitHex.forEach(hex => {
