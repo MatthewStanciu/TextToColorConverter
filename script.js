@@ -26,7 +26,7 @@ const convertToHex = str => {
 }
 
 const combineColors = (arr) => {
-  if (arr.length === 1) return arr;
+  if (arr.length === 1) return arr
 
   let combinedArr = []
   for (let i = 0; i < arr.length - 1; i++) {
