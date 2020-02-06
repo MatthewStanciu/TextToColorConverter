@@ -15,7 +15,7 @@ const convertToHex = str => {
     if (hex.length < 6) splitHex.splice(splitHex.indexOf(hex), 1)
   })
 
-  // combine arrays
+  // combine colors
   const combinedColor = combineColors(splitHex)
 
   // display the combined color
