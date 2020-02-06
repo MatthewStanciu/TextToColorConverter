@@ -1,5 +1,4 @@
 const convertToHex = str => {
-
   // convert to hex
   let hexString = ''
   for (let i = 0; i < str.length; i++) {
@@ -38,17 +37,15 @@ const combineColors = (arr) => {
 
 // stolen from https://coderwall.com/p/z8uxzw/javascript-color-blender
 const blendColors = (color1, color2) => {
-  const percentage = 0.5
-
   // convert colors to rgb
   color1 = [parseInt(color1[0] + color1[1], 16), parseInt(color1[2] + color1[3], 16), parseInt(color1[4] + color1[5], 16)]
   color2 = [parseInt(color2[0] + color2[1], 16), parseInt(color2[2] + color2[3], 16), parseInt(color2[4] + color2[5], 16)]
 
   // blend
   let color3 = [
-    (1 - percentage) * color1[0] + percentage * color2[0],
-    (1 - percentage) * color1[1] + percentage * color2[1],
-    (1 - percentage) * color1[2] + percentage * color2[2]
+    0.5 * color1[0] + 0.5 * color2[0],
+    0.5 * color1[1] + 0.5 * color2[1],
+    0.5 * color1[2] + 0.5 * color2[2]
   ]
 
   // convert to hex
