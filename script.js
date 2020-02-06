@@ -18,12 +18,6 @@ const convertToHex = str => {
   // combine arrays
   const combinedColor = combineArrays(splitHex)
 
-  /*var cvs = document.createElement('canvas');
-  var ctx = cvs.getContext('2d');
-  cvs.width = 90;
-  cvs.height = 25;
-  document.body.appendChild(cvs);*/
-
   let canvas = document.getElementById("combined-color-canvas")
   let ctx = canvas.getContext('2d')
 
@@ -32,6 +26,7 @@ const convertToHex = str => {
   ctx.fillRect(0, 0, 200, 200)
 }
 
+// stolen from https://coderwall.com/p/z8uxzw/javascript-color-blender
 const blendColors = (color1, color2) => {
   const percentage = 0.5
 
@@ -67,6 +62,5 @@ const combineArrays = (arr) => {
     combinedArr.push(blendColors(arr[i], arr[i + 1]))
   }
 
-  //console.log(combinedArr)
   return combineArrays(combinedArr)
 }
