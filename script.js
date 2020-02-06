@@ -16,7 +16,7 @@ const convertToHex = str => {
   })
 
   // combine arrays
-  const combinedColor = combineArrays(splitHex)
+  const combinedColor = combineColors(splitHex)
 
   // display the combined color
   let canvas = document.getElementById("combined-color-canvas")
@@ -53,7 +53,7 @@ const intToHex = (num) => {
   return hex
 }
 
-const combineArrays = (arr) => {
+const combineColors = (arr) => {
   if (arr.length === 1) return arr;
 
   let combinedArr = []
@@ -61,5 +61,5 @@ const combineArrays = (arr) => {
     combinedArr.push(blendColors(arr[i], arr[i + 1]))
   }
 
-  return combineArrays(combinedArr)
+  return combineColors(combinedArr)
 }
