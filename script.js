@@ -18,10 +18,9 @@ const convertToHex = str => {
   // combine arrays
   const combinedColor = combineArrays(splitHex)
 
+  // display the combined color
   let canvas = document.getElementById("combined-color-canvas")
   let ctx = canvas.getContext('2d')
-
-  // color1 on the left
   ctx.fillStyle = combinedColor
   ctx.fillRect(0, 0, 200, 200)
 }
