@@ -25,6 +25,17 @@ const convertToHex = str => {
   ctx.fillRect(0, 0, 200, 200)
 }
 
+const combineColors = (arr) => {
+  if (arr.length === 1) return arr;
+
+  let combinedArr = []
+  for (let i = 0; i < arr.length - 1; i++) {
+    combinedArr.push(blendColors(arr[i], arr[i + 1]))
+  }
+
+  return combineColors(combinedArr)
+}
+
 // stolen from https://coderwall.com/p/z8uxzw/javascript-color-blender
 const blendColors = (color1, color2) => {
   const percentage = 0.5
@@ -51,15 +62,4 @@ const intToHex = (num) => {
   if (hex.length == 1) hex = '0' + hex
 
   return hex
-}
-
-const combineColors = (arr) => {
-  if (arr.length === 1) return arr;
-
-  let combinedArr = []
-  for (let i = 0; i < arr.length - 1; i++) {
-    combinedArr.push(blendColors(arr[i], arr[i + 1]))
-  }
-
-  return combineColors(combinedArr)
 }
