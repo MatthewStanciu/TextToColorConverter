@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text to Color Converter</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <h3>Enter a word or phrase and I'll convert it to a color</h3>
+    <textarea id="color-text">I don't have the pose for applesauce on clothes</textarea>
+    <button id="color-text-button" onclick="convertToHex(document.getElementById('color-text').value)">Submit</button>
+    <canvas id="combined-color-canvas"></canvas>
+  </body>
+</html>
