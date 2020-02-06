@@ -10,8 +10,8 @@ const convertToHex = str => {
   let splitHex = hexString.match(/.{1,6}/g)
 
   // remove anything that isn't 6 characters long
-  splitHex.forEach(hex => {
-    if (hex.length < 6) splitHex.splice(splitHex.indexOf(hex), 1)
+  splitHex.forEach((hex, index) => {
+    if (hex.length < 6) splitHex.splice(index, 1)
   })
 
   // combine colors
