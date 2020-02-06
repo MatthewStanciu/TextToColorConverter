@@ -27,9 +27,11 @@ const convertToHex = str => {
 const combineColors = (arr) => {
   if (arr.length === 1) return arr
   
+  // blend the first two colors and replace them with the blended color
   let combinedColor = blendColors(arr[0], arr[1])
   arr.splice(0, 2, combinedColor)
   
+  // do this recursively until you reach one ultra-blended color
   return combineColors(arr)
 }
 
