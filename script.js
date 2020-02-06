@@ -26,13 +26,11 @@ const convertToHex = str => {
 
 const combineColors = (arr) => {
   if (arr.length === 1) return arr
-
-  let combinedArr = []
-  for (let i = 0; i < arr.length - 1; i++) {
-    combinedArr.push(blendColors(arr[i], arr[i + 1]))
-  }
-
-  return combineColors(combinedArr)
+  
+  let combinedColor = blendColors(arr[0], arr[1])
+  arr.splice(0, 2, combinedColor)
+  
+  return combineColors(arr)
 }
 
 // stolen from https://coderwall.com/p/z8uxzw/javascript-color-blender
